@@ -53,8 +53,8 @@ Optional flags:
 - `--start-url` or `-u`: override the AWS SSO start URL.
 - `--region` or `-r`: override the AWS region.
 - `--profile` or `-p`: name of the AWS profile to write in `~/.aws/credentials`.
-- `--export` or `-e`: print shell `export` lines for the generated temporary credentials.
 - `--refresh`: force a new SSO login even if valid credentials already exist.
+- `--switch` or `-s`: List accounts again and switch account/role.
 
 ## Typical workflow
 
@@ -90,4 +90,4 @@ If you select more than one account, the script writes separate profiles using t
 
 - If the current credentials are still valid, the script exits early and tells you how long they remain active.
 - If you do not pass `--refresh`, the cached SSO token may avoid opening the browser again.
-- The script assumes the AWS account, role, and region information comes from your IAM Identity Center session.
+- The script assumes the AWS account, role, and region information fallbacks to `us-east-2` if you do not provide one.
