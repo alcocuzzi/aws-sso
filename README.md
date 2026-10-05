@@ -24,7 +24,7 @@ Create a virtual environment and install the dependencies used by the script:
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-pip install boto3 botocore typer rich
+pip3 install boto3 botocore typer rich
 ```
 
 If you prefer, you can install those packages into any existing Python environment instead.
@@ -45,7 +45,7 @@ Otherwise, you can also pass those values on the command line with `--start-url`
 From the `aws-sso` folder, run:
 
 ```bash
-python aws_sso.py
+python3 aws_sso.py
 ```
 
 Optional flags:
@@ -75,13 +75,13 @@ Optional flags:
 Use a specific profile name:
 
 ```bash
-python aws_sso.py --profile dev
+python3 aws_sso.py --profile dev
 ```
 
-Force a fresh login and print export commands:
+List the accounts again and select an account:
 
 ```bash
-python aws_sso.py --refresh --export
+python3 aws_sso.py --switch
 ```
 
 If you select more than one account, the script writes separate profiles using the account names converted to lowercase with spaces replaced by hyphens.
